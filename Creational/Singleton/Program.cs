@@ -3,7 +3,7 @@
     static void Main(string[] args)
     {
         SingletonTest();
-        SingletonWithDoubleCheckTest();
+        LazySingletonTest();
 
 
         void SingletonTest()
@@ -29,18 +29,18 @@
 
         }
         
-        void SingletonWithDoubleCheckTest()
+        void LazySingletonTest()
         {
-            SingletonWithDoubleCheck? singletonDoubleCheck1 = null;
-            SingletonWithDoubleCheck? singletonDoubleCheck2 = null;
+            LazySingleton? singletonDoubleCheck1 = null;
+            LazySingleton? singletonDoubleCheck2 = null;
 
             Task.Run(() =>
             {
-                singletonDoubleCheck1 = SingletonWithDoubleCheck.Instance;
+                singletonDoubleCheck1 = LazySingleton.Instance;
             });
             Task.Run(() =>
             {
-                singletonDoubleCheck2 = SingletonWithDoubleCheck.Instance;
+                singletonDoubleCheck2 = LazySingleton.Instance;
             });
 
             Thread.Sleep(2000);

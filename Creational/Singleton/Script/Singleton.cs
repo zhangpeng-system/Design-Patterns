@@ -3,10 +3,11 @@
 /// </summary>
 public class Singleton
 {
-    // インスタンス
+    // 唯一のインスタンスを生成
     private static readonly Singleton instance = new Singleton();
+
     /// <summary>
-    /// アクセス可能なInstanceを外に提供します。
+    /// 外部からアクセス可能なInstanceを提供
     /// </summary>
     /// <value></value>
     public static Singleton Instance
