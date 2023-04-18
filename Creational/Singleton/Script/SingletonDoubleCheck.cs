@@ -1,5 +1,5 @@
 /// <summary>
-/// ダブルチェックによる性能と効率両方とも備える
+/// Singletonクラス(Lazy＆DoubleCheck)
 /// </summary>
 public class SingletonWithDoubleCheck
 {
